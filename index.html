@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atividades complementares</title>
+  <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <p class="marca">Universidade de Vassouras</p>
+    <p class="curso">Engenharia de Software</p>
+  </header>
+
+  <main>
+    <p class="anexo">Anexo II</p>
+    <h1>Atividades complementares</h1>
+    <p class="resumo">
+      Preenche nome, período, matrícula e data. A rubrica e as horas ficam em branco para a faculdade lançar. A assinatura você faz pelo gov.br.
+    </p>
+
+    <div class="erros" id="erros" role="alert" hidden></div>
+
+    <form id="formulario">
+      <label>
+        Nome completo
+        <input name="nome" type="text" autocomplete="name" required maxlength="80" placeholder="Nome e sobrenome">
+      </label>
+
+      <label>
+        Período
+        <select name="periodo" required>
+          <option value="" selected disabled>Selecione</option>
+          <option value="1">1º período</option>
+          <option value="2">2º período</option>
+          <option value="3">3º período</option>
+          <option value="4">4º período</option>
+          <option value="5">5º período</option>
+          <option value="6">6º período</option>
+          <option value="7">7º período</option>
+          <option value="8">8º período</option>
+          <option value="9">9º período</option>
+          <option value="10">10º período</option>
+        </select>
+      </label>
+
+      <label>
+        Matrícula
+        <input name="matricula" type="text" inputmode="numeric" autocomplete="off" required maxlength="12" placeholder="Somente números">
+      </label>
+
+      <label>
+        Data
+        <input name="data" type="date" required>
+      </label>
+
+      <button type="submit" id="gerar">Gerar PDF</button>
+    </form>
+
+    <p class="nota">O PDF baixa neste aparelho. Imprima as duas páginas e assine pelo gov.br.</p>
+  </main>
+
+  <script src="vendor/pdf-lib.min.js"></script>
+  <script src="formulario.js"></script>
+</body>
+</html>
