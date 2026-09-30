@@ -140,7 +140,7 @@ button:disabled {
 
 .nota { margin-top: 16px; font-size: 14px; }
 
-.baixar {
+.baixar, .gov {
   display: block;
   margin-top: 18px;
   padding: 14px 16px;
@@ -152,7 +152,7 @@ button:disabled {
   text-decoration: none;
 }
 
-.baixar:hover { background: #f8efe8; }
+.baixar:hover, .gov:hover { background: #f8efe8; }
 
 @media (max-width: 640px) {
   body { background: linear-gradient(180deg, var(--vinho) 0 132px, var(--papel) 132px); }
