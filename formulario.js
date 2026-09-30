@@ -48,6 +48,7 @@ formulario.addEventListener("submit", async (evento) => {
   mostrarErros([]);
   try {
     await baixarPdf(dados);
+    limparFormulario();
   } catch (erro) {
     console.error(erro);
     mostrarErros(["Não foi possível gerar o PDF. Tente de novo."]);
@@ -56,6 +57,11 @@ formulario.addEventListener("submit", async (evento) => {
     botao.textContent = "Gerar PDF";
   }
 });
+
+function limparFormulario() {
+  formulario.reset();
+  campoData.value = hojeLocal();
+}
 
 function hojeLocal() {
   const agora = new Date();
